@@ -1,0 +1,5 @@
+id INT pk
+dataset_id INT fk=datasets.id
+model_id INT fk=models.id
+accuracy FLOAT
+status STRING

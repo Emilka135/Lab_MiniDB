@@ -1,0 +1,21 @@
+// Вставьте этот текст на https://dbdiagram.io/d и сделайте скриншот схемы для отчёта
+Table datasets {
+  id int [pk, increment]
+  name varchar
+  task varchar
+  size int
+}
+
+Table models {
+  id int [pk, increment]
+  name varchar
+  version varchar
+}
+
+Table experiments {
+  id int [pk, increment]
+  dataset_id int [not null, ref: > datasets.id]
+  model_id int [not null, ref: > models.id]
+  accuracy float
+  status varchar
+}

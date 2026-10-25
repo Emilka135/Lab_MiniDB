@@ -1,0 +1,4 @@
+id INT pk
+name STRING
+task STRING
+size INT
